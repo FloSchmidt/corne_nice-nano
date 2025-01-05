@@ -18,6 +18,7 @@
                 compatible = "zmk,keymap";
 
                 default_layer {
+display-name = "Base"
 // -----------------------------------------------------------------------------------------
 // |  TAB |  Q  |  W  |  E  |  R  |  T  |   |  Y  |  U   |  I  |  O  |  P  | BSPC |
 // | CTRL |  A  |  S  |  D  |  F  |  G  |   |  H  |  J   |  K  |  L  |  ;  |  '   |
@@ -31,20 +32,22 @@
                         >;
                 };
                 lower_layer {
+display-name = "Lower"
 // -----------------------------------------------------------------------------------------
 // |  TAB |  1  |  2  |  3  |  4  |  5  |   |  6  |  7  |  8  |  9  |  0  | BSPC |
 // | BTCLR| BT1 | BT2 | BT3 | BT4 | BT5 |   | LFT | DWN |  UP | RGT |     |      |
-// | SHFT | HUD | HUI | BRD | BRI |     |   |     |     |     |     |     |      |
+// | SHFT | HUD | HUI | BRD | BRI |     |   |     |     |     |     |STUN |      |
 //                    | GUI |     | SPC |   | ENT |     | ALT |
                         bindings = <
    &kp TAB    &kp N1       &kp N2       &kp N3       &kp N4       &kp N5         &kp N6   &kp N7   &kp N8 &kp N9    &kp N0 &kp BSPC
    &bt BT_CLR &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4   &kp LEFT &kp DOWN &kp UP &kp RIGHT &trans &trans
-   &kp LSHFT   &rgb_ug RGB_HUD       &rgb_ug RGB_HUI       &rgb_ug RGB_BRD       &rgb_ug RGB_BRI &rgb_ug  &trans   &trans   &trans &trans    &trans &trans
+   &kp LSHFT   &rgb_ug RGB_HUD       &rgb_ug RGB_HUI       &rgb_ug RGB_BRD       &rgb_ug RGB_BRI &rgb_ug  &trans   &trans   &trans &trans &studio_unlock &trans
                                     &kp LGUI     &trans       &kp SPACE      &kp RET  &trans   &kp RALT
                         >;
                 };
 
                 raise_layer {
+display-name = "Upper"
 // -----------------------------------------------------------------------------------------
 // |  TAB |  !  |  @  |  #  |  $  |  %  |   |  ^  |  &  |  *  |  (  |  )  | BSPC |
 // | CTRL |     |     |     |     |     |   |  -  |  =  |  [  |  ]  |  \  |  `   |
